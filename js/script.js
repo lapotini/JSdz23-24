@@ -90,23 +90,19 @@
       view.renderList(model.data);
 
     }
-
-                   function editItem(){
-                     var item = $(this).attr('data-value');
-                     var inputText = $(this).siblings($('.text'));
-                     inputText.removeAttr("disabled");
-                     inputText.focus();
-
-                     view.elements.listContainer.on('blur', '.text', function(){
-                       inputText.prop('disabled', false);
-                       var newItem = $(this).val();
-                       console.log(newItem);
-
-                       model.editItem(item, newItem);
-                       view.renderList(model.data);
-                     });
-
-                   }
+     function editItem(){
+       var item = $(this).attr('data-value');
+       var inputText = $(this).siblings($('.text'));
+       inputText.removeAttr("disabled");
+       inputText.focus();
+       view.elements.listContainer.on('blur', '.text', function(){
+         inputText.prop('disabled', false);
+         var newItem = $(this).val();
+         console.log(newItem);
+         model.editItem(item, newItem);
+         view.renderList(model.data);
+       });
+     }
 
 
 
