@@ -32,7 +32,6 @@ body{
   font-weight: bold;
   text-decoration: none;
   text-shadow: rgba(255,255,255,.5) 1px 1px, rgba(100,100,100,.3) 3px 7px 3px;
-  user-select: none;
   padding: 1em 2em;
   outline: none;
   border-radius: 3px / 100%;
@@ -55,14 +54,6 @@ body{
 .add-button:active {
   top: 1px;
 }
-
-
-
-
-
-
-
-
 
 .sticker{
   display: inline-block;
