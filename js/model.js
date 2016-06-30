@@ -6,6 +6,8 @@ define(
       'tmpl'
     ],
 
+   function () {
+
     function Model (data){
       var self = this;
       self.data = data;
@@ -30,7 +32,7 @@ define(
 
        self.editItem = function(item, editedItem){
          var index = self.data.indexOf(item);
-         console.log(index);
+         //console.log(index);
          if(index === -1){
            return;
          }
@@ -38,10 +40,10 @@ define(
          return self.data;
 
         };
+      }
+
         return Model;
     }
-
-
 
 
 );

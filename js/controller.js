@@ -6,7 +6,7 @@ define(
     'model',
     'view'
   ],
-
+    function(){
     function Controller (model, view){
       var self = this;
 
@@ -37,13 +37,13 @@ define(
          view.elements.listContainer.on('blur', '.text', function(){
            inputText.prop('disabled', false);
            var newItem = $(this).val();
-           console.log(newItem);
+           //console.log(newItem);
            model.editItem(item, newItem);
            view.renderList(model.data);
          });
        }
+      }
       return Controller;
+
     }
-
-
   );

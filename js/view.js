@@ -8,7 +8,7 @@ define(
 
       ],
 
-
+    function(){
       function View (model){
         var self = this;
 
@@ -32,8 +32,8 @@ define(
 
         init();
 
-        return View;
       }
 
-
+      return View;
+    }
   );

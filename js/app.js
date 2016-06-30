@@ -1,6 +1,6 @@
 require.config({
     paths: {
-       'jquery': 'https://code.jquery.com/ui/1.11.3/jquery-ui.min.js',
+       'jquery': 'http://code.jquery.com/jquery-1.11.3.min',
        'tmpl': 'tmpl'
     },
     shim: {
@@ -23,13 +23,13 @@ require(
     'controller'
   ],
   function($, tmpl, model, view, controller){
-    console.log("model", model);
-    console.log("view", view);
-    console.log("controller", controller);
+    //console.log("model", model);
+    //console.log("view", view);
+    //console.log("controller", controller);
     var initToDoList = ['Learn', 'Sleep'];
-    var model = new Model(initToDoList);
-    var view = new View(model);
-    var controller = new Controller(model, view);
+    var model = new model(initToDoList);
+    var view = new view(model);
+    var controller = new controller(model, view);
 
   }
 
